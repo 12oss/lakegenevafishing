@@ -1,0 +1,173 @@
+<style type="text/css">
+/* The side navigation menu */
+
+.sidenav {
+	height: 100%;
+	/* 100% Full-height */
+	width: 0;
+	/* 0 width - change this with JavaScript */
+	position: fixed;
+	/* Stay in place */
+	z-index: 999;
+	/* Stay on top */
+	top: 0;
+	left: 0;
+	background-color: #222222;
+	/* Black*/
+	overflow-x: hidden;
+	/* Disable horizontal scroll */
+	padding-top: 60px;
+	/* Place content 60px from the top */
+	transition: 0.5s;
+	/* 0.5 second transition effect to slide in the sidenav */
+}
+
+
+/* The navigation menu links */
+
+.sidenav a {
+	padding: 8px 8px 8px 32px;
+	text-decoration: none;
+	font-size: 20px;
+	color: #999999;
+	display: block;
+	transition: 0.3s;
+	border-bottom: 2px solid rgba(125, 125, 125, .2);
+}
+
+.sidenav a:first-child {
+	border-bottom: none !important;
+}
+
+
+/* When you mouse over the navigation links, change their color */
+
+.sidenav a:hover,
+.offcanvas a:focus {
+	color: #cccccc;
+	background-color: #666633;;
+}
+
+
+/* Position and style the close button (top right corner) */
+
+.sidenav .closebtn {
+	position: absolute;
+	top: 0;
+	right: 0px;
+	font-size: 36px;
+	width: 80px;
+}
+
+a.lineheight-2 {
+	line-height: 25px;
+}
+
+.navExpand {
+	width: 250px !important;
+}
+
+.ham-menu {
+	margin-left: 0px !important;
+	margin-right: 0px !important;
+	padding: 15px;
+	cursor: pointer;
+}
+
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+
+@media screen and (max-height: 450px) {
+	.sidenav {
+		padding-top: 15px;
+	}
+	.sidenav a {
+		font-size: 18px;
+	}
+	a.lineheight-2 {
+		line-height: 18px;
+	}
+}
+
+
+/* ANIMATED MENU BUTTON THINGY*/
+
+.nav-container {
+	display: inline-block;
+	cursor: pointer;
+	position: absolute;
+	top: 2%;
+	left: auto;
+	right: 2%;
+	width: 35px;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+	width: 35px;
+	height: 4px;
+	background-color: #333;
+	margin: 6px 0;
+	transition: 0.4s;
+	border-radius: 25px;
+}
+
+
+/* end ANIMATED MENU THINGY*/
+</style>
+<!-- H A M B U R G E R   M E N U  -->
+<div style="position: relative;">
+	<ul class="nav navbar-nav ham-menu" title="Hamburger Menu" onclick="openNav()">
+		<div class="bar1"></div>
+		<div class="bar2"></div>
+		<div class="bar3"></div>
+	</ul>
+</div>
+<!-- H A M B U R G E R   M E N U  -->
+<!-- S T A R T   S I D E N A V  -->
+<nav id="mySidenav" class="sidenav">
+	<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+	<a href="{{ site.baseurl }}/">
+		<img src="{{ site.baseurl }}/assets/css/images/ccc-logo.svg" width="40%" alt="Lake Geneva Fishing Home" />
+	</a>
+	<a href="{{ site.baseurl }}/Boats-Rates">
+		Boats &amp; Rates
+	</a>
+	<a href="{{ site.baseurl }}/Pontoons">
+		Pontoons
+	</a>
+	<a href="{{ site.baseurl }}/Fish-of-Lake-Geneva" class="lineheight-2">
+		Fish of Lake Geneva
+	</a>
+	<a href="{{ site.baseurl }}/Testimonials">
+		Testimonials
+	</a>
+	<a href="{{ site.baseurl }}/Picture-Gallery">
+		Photo Gallery
+	</a>
+	<a href="{{ site.baseurl }}/Sponsors">
+		Sponsors
+	</a>
+	<a href="{{ site.baseurl }}/Corporate">
+		Corporate
+	</a>
+	<a href="{{ site.baseurl }}/Contact-Us">
+		Contact Us <i class="fa fa-share pull-right" aria-hidden="true" style="margin-top: 6px; font-size: 1.6rem"></i>
+
+	</a>
+</nav>
+<!-- end S I D E N A V  -->
+<script type="text/javascript">
+/* Set the width of the side navigation to 250px */
+
+function openNav() {
+	document.getElementById("mySidenav").style.width = "250px";
+
+}
+
+/* Set the width of the side navigation to 0 */
+function closeNav() {
+	document.getElementById("mySidenav").style.width = "0";
+}
+</script>
